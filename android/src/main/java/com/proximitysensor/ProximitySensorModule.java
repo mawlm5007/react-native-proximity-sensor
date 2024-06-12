@@ -112,7 +112,7 @@ public class ProximitySensorModule extends ReactContextBaseJavaModule implements
 
       isToggle = false;
 
-      if (distance <= 3) {
+      if (distance <= 9.5) {
         if (tempMs - lastCloseTime >= 500) {
           if(isClose != true){
             isToggle = true;
@@ -120,7 +120,7 @@ public class ProximitySensorModule extends ReactContextBaseJavaModule implements
           }
           lastCloseTime = tempMs;
         }
-      } else if (distance >= 7) {
+      } else if (distance >= 9.5) {
         if (tempMs - lastFarTime >= 500) {
           if(isClose != false){
             isToggle = true;
